@@ -26,9 +26,9 @@ Feature: Attestations Functionality
     Then Success message should be displayed
 
     Examples:
-      | Attestations    | newAttestations |
-      | Charles Doğan   | Münevver Pessoa |
-      | Byun chul Şahin | Mevlud Rimbaud  |
+      | Attestations | newAttestations   |
+      | SMOKETEST99  | REGRESSSIONTEST99 |
+
 
 
 

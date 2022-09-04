@@ -26,6 +26,7 @@ public class LoginContent extends Parent{
     WebElement myElement;
 
     public void findAndSend(String element, String value){
+
         switch (element){
 
             case "username" : myElement = username;break;
@@ -35,6 +36,7 @@ public class LoginContent extends Parent{
         sendKeysFunction(myElement,value);
     }
     public void findAndClick(String element){
+
         switch (element){
 
             case "loginButton" : myElement = loginButton;break;
