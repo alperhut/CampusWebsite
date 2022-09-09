@@ -6,20 +6,32 @@ Feature: Human Resource
 
   Scenario: Creat,edit and delete a position
     When Go to HumanResource in the Omer's DialogContent
+
       | cookiesAccept                   |
       | humanResource                   |
       | HumanResourceSetup              |
       | humanResourcePositionCategories |
+
     And Click on the element in the Omer's DialogContent
+
       | addButton |
+
     And Send on the element in the Omer's DialogContent
+
       | nameInput | Omar AGA |
+
     And Click on the element in the Omer's DialogContent
+
       | saveButton |
+
     Then Verify on the element in the Omer's DialogContent
+
       | successMessage | successfully |
+
     When Send on the element in the Omer's DialogContent
+
       | searchInput | Omar AGA |
+
   #  And Wait Until Flash DialogContent
    #   | searchButton | style | visibility: visible; |
     And Click on the element in the Omer's DialogContent
