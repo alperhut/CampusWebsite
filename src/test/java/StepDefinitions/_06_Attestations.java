@@ -58,9 +58,9 @@ public class _06_Attestations {
         dc.waitUntilLoading();
     }
 
-    @And("Click to Delete Button")
-    public void clickToDeleteButton() {
 
+    @And("Click to Delete Button from Attestations")
+    public void clickToDeleteButtonFromAttestations() {
 
         WebDriverWait wait = new WebDriverWait(GWDBasic.driver, Duration.ofSeconds(20));
         wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector("fuse-progress-bar > *"), 0));

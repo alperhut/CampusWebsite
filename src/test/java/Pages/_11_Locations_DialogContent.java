@@ -6,7 +6,11 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class _11_Locations_DialogContent extends Parent {
+    public _11_Locations_DialogContent() {
 
+        PageFactory.initElements(GWDBasic.getDriver(), this);
+
+    }
     WebElement myElement;
     @FindBy(xpath = "//ms-add-button[contains(@tooltip,'TITLE.ADD')]//button")
     private WebElement addButton;
@@ -41,11 +45,7 @@ public class _11_Locations_DialogContent extends Parent {
     @FindBy(xpath = "//span[contains(text(),'Delete')]")
     private WebElement deleteButton;
 
-    public _11_Locations_DialogContent() {
 
-        PageFactory.initElements(GWDBasic.getDriver(), this);
-
-    }
 
     public void findAndClick(String element) {
 

@@ -21,13 +21,13 @@ Feature: Attestations Functionality
 
     Then Success message should be displayed
 
-    And Click to Delete Button
+    And Click to Delete Button from Attestations
 
     Then Success message should be displayed
 
     Examples:
-      | Attestations | newAttestations   |
-      | SMOKETEST99  | REGRESSSIONTEST99 |
+      | Attestations | newAttestations |
+      | SanityyTestt | SanmityyTestt   |
 
 
 
