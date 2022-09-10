@@ -11,7 +11,7 @@ public class LeftNavCommon extends Parent{
         PageFactory.initElements(GWDBasic.getDriver(),this);
     }
 
-
+    //****************HUMAN RESOURCES*****************
     @FindBy(xpath = "//span[text()='Human Resources']")
     private WebElement HResources;
 
@@ -21,6 +21,7 @@ public class LeftNavCommon extends Parent{
     @FindBy(xpath = "(//span[text()='Attestations'])[1]")
     private WebElement Attestations;
 
+    //***************SETUP******************
     @FindBy(xpath = "(//span[text()='Setup'])[1]")
     private WebElement setUp;
 
