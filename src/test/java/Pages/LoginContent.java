@@ -23,6 +23,9 @@ public class LoginContent extends Parent{
     @FindBy(xpath="(//span[contains(text(),'Dashboard')])[2]")
     private WebElement dashboard;
 
+    @FindBy(xpath = "(//button[@class='consent-give'])[1]")
+    private WebElement acceptCookies;
+
     WebElement myElement;
 
     public void findAndSend(String element, String value){
@@ -40,6 +43,7 @@ public class LoginContent extends Parent{
         switch (element){
 
             case "loginButton" : myElement = loginButton;break;
+            case "acceptCookies" : myElement = acceptCookies;break;
 
         }
         clickFunction(myElement);

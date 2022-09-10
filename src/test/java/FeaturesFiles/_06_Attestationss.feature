@@ -3,12 +3,13 @@ Feature: Attestations Functionality
   Background:
     Given Navigate to basqar
     When Enter username and password and click login button
+    Then User should login successfuly
 
   Scenario Outline: Add Attestations
 
     And Click on the element in the left Nav
 
-      | acceptCookies |
+
       | HResources    |
       | underHRsetup  |
       | Attestations  |

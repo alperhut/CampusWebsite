@@ -11,8 +11,6 @@ public class LeftNavCommon extends Parent{
         PageFactory.initElements(GWDBasic.getDriver(),this);
     }
 
-    @FindBy(xpath = "(//button[@class='consent-give'])[1]")
-    private WebElement acceptCookies;
 
     @FindBy(xpath = "//span[text()='Human Resources']")
     private WebElement HResources;
@@ -36,7 +34,7 @@ public class LeftNavCommon extends Parent{
 
     public void findAndClick(String element){
         switch (element){
-            case "acceptCookies" : myElement = acceptCookies;break;
+
             case "HResources" : myElement = HResources;break;
             case "underHRsetup" : myElement = underHRsetup;break;
             case "Attestations" : myElement = Attestations;break;

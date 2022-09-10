@@ -5,6 +5,8 @@ import Utilities.GWDBasic;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
 public class _01_LoginSteps {
 
@@ -16,14 +18,17 @@ public class _01_LoginSteps {
     }
     @When("Enter username and password and click login button")
     public void enter_username_and_password_and_click_login_button() {
+
+        lc.findAndClick("acceptCookies");
         lc.findAndSend("username","richfield.edu");
         lc.findAndSend("password","Richfield2020!");
         lc.findAndClick("loginButton");
+
     }
     @Then("User should login successfuly")
     public void user_should_login_successfuly() {
 
-        lc.findAndClick("acceptCookies");
+
         lc.findAndVerify("dashboard","Dashboard");
 
     }
