@@ -9,7 +9,7 @@ Feature: Attestations Functionality
 
     And Click on the element in the left Nav
 
-
+      | acceptCookies |
       | HResources    |
       | underHRsetup  |
       | Attestations  |
@@ -28,7 +28,7 @@ Feature: Attestations Functionality
 
     Examples:
       | Attestations | newAttestations |
-      | SanityyTestt | SanmityyTestt   |
+      | test0101     | test2020        |
 
 
 

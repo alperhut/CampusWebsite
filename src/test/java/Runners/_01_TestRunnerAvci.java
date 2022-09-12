@@ -5,7 +5,8 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
 
-        features = {"src/test/java/FeaturesFiles/_06_Attestationss.feature"},
+        features = {"src/test/java/FeaturesFiles/_06_Attestationss.feature",
+                "src/test/java/FeaturesFiles/_11_Locations.feature"},
         glue = {"StepDefinitions"}
 
 )

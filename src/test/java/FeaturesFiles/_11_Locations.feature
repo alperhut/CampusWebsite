@@ -9,7 +9,7 @@ Feature: Locations Functionality
 
     And Click on the element in the left Nav
 
-
+      | acceptCookies |
       | setUp         |
       | schoolSetup   |
       | locations     |

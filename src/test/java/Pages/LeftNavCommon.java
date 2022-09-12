@@ -31,6 +31,9 @@ public class LeftNavCommon extends Parent{
     @FindBy(xpath = "//span[text()='Locations']")
     private WebElement locations;
 
+    @FindBy(xpath = "(//button[@class='consent-give'])[1]")
+    private WebElement acceptCookies;
+
     WebElement myElement;
 
     public void findAndClick(String element){
@@ -42,6 +45,7 @@ public class LeftNavCommon extends Parent{
             case "setUp" : myElement = setUp;break;
             case "schoolSetup" : myElement = schoolSetup;break;
             case "locations" : myElement = locations;break;
+            case "acceptCookies" : myElement = acceptCookies;break;
         }
         clickFunction(myElement);
     }
