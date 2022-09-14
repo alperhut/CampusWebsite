@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
-//as
+//123
 public class Staj13MAGDialogContent extends Parent{
     public Staj13MAGDialogContent() {
         PageFactory.initElements(GWDBasic.getDriver(), this);
