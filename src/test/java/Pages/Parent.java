@@ -64,4 +64,11 @@ public class Parent {
         actions.moveToElement(element).click().build().perform();
 
     }
+    public void clearFunction(WebElement element)
+    {
+        waitUntilClickable(element); // tıklanabilir olana kadar bekle
+        scrollToElement(element); // elemente scroll yap
+        element.clear(); // clear yap
+    }
+
 }

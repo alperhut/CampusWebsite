@@ -27,7 +27,7 @@ public class Hooks {
     {
         System.out.println("Senaryo Bitti");
         System.out.println("scenario sonucu="+ scenario.getStatus());
-        System.out.println("scenario isFailed ?="+ scenario.isFailed());
+        //System.out.println("scenario isFailed ?="+ scenario.isFailed());
 
         LocalDateTime date = LocalDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yy");
