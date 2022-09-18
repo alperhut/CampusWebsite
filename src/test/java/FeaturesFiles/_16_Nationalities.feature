@@ -1,50 +1,51 @@
-Feature: Field Functionality
+Feature:  Nationalities Functionality
 
   Background:
     Given Navigate to basqar
-    When Enter username and password and click login button
+    And Enter username and password and click login button
     Then User should login successfuly
-    When Click on the element in the left Nav
+    And Click on the element in the left Nav
+
       | acceptCookies |
       | setupOne      |
       | parameters    |
-      | fields        |
+      | nationalities |
 
-  Scenario: Create Field
+
+  Scenario:Create a Nationality
     And Click on the element in the Dialog
       | addButton |
 
     And User sending the keys in Dialog content
-      | name_F | DatabaseTESTing |
-      | code_F | 99lele          |
-
-    And Click on the element in the Dialog
-      | fieldType |
-      | text      |
+      | searchInputTwo | PapuaGaziGine |
 
     And Click on the element in the Dialog
       | saveButton |
 
     Then Success message should be displayedd
 
-  Scenario: Edit Field
+  Scenario: Edit a Nationality
     And User sending the keys in Dialog content
-      | searchInputOne | DatabaseTESTing |
+      | searchInputOne | PapuaGaziGine |
 
     And Click on the element in the Dialog
-      | editButton |
+      | searchButton |
+      | editButton   |
 
     And User sending the keys in Dialog content
-      | name_F | APITestingg |
-      | code_F | 12xyz       |
+      | searchInputTwo | NewVan |
 
     And Click on the element in the Dialog
       | saveButton |
 
     Then Success message should be displayedd
 
-  Scenario: Delete Field
+  Scenario: Delete a Nationality
     And User delete item from Dialog
-      | APITestingg |
+      | NewVan |
 
     Then Success message should be displayedd
+
+
+
+

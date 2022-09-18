@@ -1,50 +1,48 @@
-Feature: Field Functionality
+Feature: Document Types Functionality
 
   Background:
     Given Navigate to basqar
     When Enter username and password and click login button
     Then User should login successfuly
-    When Click on the element in the left Nav
+    And Click on the element in the left Nav
       | acceptCookies |
       | setupOne      |
       | parameters    |
-      | fields        |
+      | documentType  |
 
-  Scenario: Create Field
+  Scenario: Create a Document Types
     And Click on the element in the Dialog
       | addButton |
 
     And User sending the keys in Dialog content
-      | name_F | DatabaseTESTing |
-      | code_F | 99lele          |
+      | searchInputTwo | AzizKaracaQA |
+      | description    | FullStackQA  |
 
     And Click on the element in the Dialog
-      | fieldType |
-      | text      |
+      | stageOne   |
+      | stageTwo   |
+      | saveButton |
+
+    Then Success message should be displayedd
+
+  Scenario: Edit Document Types
+    And User sending the keys in Dialog content
+      | searchInputOne | AzizKaracaQA |
+
+    And Click on the element in the Dialog
+      | searchButton |
+      | editButton   |
+
+    And User sending the keys in Dialog content
+      | searchInputTwo | Group199 |
 
     And Click on the element in the Dialog
       | saveButton |
 
     Then Success message should be displayedd
 
-  Scenario: Edit Field
-    And User sending the keys in Dialog content
-      | searchInputOne | DatabaseTESTing |
-
-    And Click on the element in the Dialog
-      | editButton |
-
-    And User sending the keys in Dialog content
-      | name_F | APITestingg |
-      | code_F | 12xyz       |
-
-    And Click on the element in the Dialog
-      | saveButton |
-
-    Then Success message should be displayedd
-
-  Scenario: Delete Field
+  Scenario: Delete Document Types
     And User delete item from Dialog
-      | APITestingg |
+      | Group199 |
 
     Then Success message should be displayedd

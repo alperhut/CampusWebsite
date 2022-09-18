@@ -1,40 +1,47 @@
-Feature: Attestations Functionality
+Feature:Position Functionality
 
   Background:
     Given Navigate to basqar
     When Enter username and password and click login button
     Then User should login successfuly
-
-  Scenario Outline: Add Position
-
     And Click on the element in the left Nav
+      | acceptCookies       |
+      | humanResources      |
+      | humanResourcesSetup |
+      | positions           |
 
-      | acceptCookies |
-      | HResources    |
-      | underHRsetup  |
-      | Position      |
+  Scenario: Create a position
+    And Click on the element in the Dialog
+      | addButton |
 
-    And Create to new "<Position>", "<shortName>" from Position
+    And User sending the keys in Dialog content
+      | name_F | TestLEADDD |
+      | code_F | Group190   |
 
-    Then Success message should be displayed
+    And Click on the element in the Dialog
+      | saveButton |
 
-    And Edit to "<newPosition>", "<newshortName>"  from Position
+    Then Success message should be displayedd
 
-    Then Success message should be displayed
+  Scenario: Edit a position
+    And User sending the keys in Dialog content
+      | searchInputOne | TestLEADDD |
 
-    And Click to Delete Button from Position
+    And Click on the element in the Dialog
+      | searchButton |
+      | editButton   |
 
-    Then Success message should be displayed
+    And User sending the keys in Dialog content
+      | name_F | TestLEADCampuss |
+      | code_F | Group1919       |
 
-    Examples:
-      | Position | shortName | newPosition | newshortName |
-      | yeniElf  | Elrond    | Gral        | oldu         |
+    And Click on the element in the Dialog
+      | saveButton |
 
+    Then Success message should be displayedd
 
+  Scenario: Delete a position
+    And User delete item from Dialog
+      | TestLEADCampuss |
 
-
-
-
-
-
-
+    Then Success message should be displayedd

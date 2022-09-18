@@ -5,9 +5,10 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
 
-        features = {"src/test/java/FeaturesFiles/_08_Field.feature"},
+        features = {"src/test/java/FeaturesFiles"},
         glue = {"StepDefinitions"}
 
 )
-public class _08_Field extends AbstractTestNGCucumberTests {
+public class _01_TestRunner extends AbstractTestNGCucumberTests {
+
 }

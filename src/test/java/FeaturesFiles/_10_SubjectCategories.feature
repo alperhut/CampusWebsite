@@ -1,50 +1,47 @@
-Feature: Field Functionality
+Feature:Subject Categories Functionality
 
   Background:
     Given Navigate to basqar
     When Enter username and password and click login button
     Then User should login successfuly
-    When Click on the element in the left Nav
-      | acceptCookies |
-      | setupOne      |
-      | parameters    |
-      | fields        |
+    And Click on the element in the left Nav
+      | acceptCookies     |
+      | education         |
+      | educationSetup    |
+      | subjectCategories |
 
-  Scenario: Create Field
+  Scenario: Create a subject categories
     And Click on the element in the Dialog
       | addButton |
 
     And User sending the keys in Dialog content
-      | name_F | DatabaseTESTing |
-      | code_F | 99lele          |
-
-    And Click on the element in the Dialog
-      | fieldType |
-      | text      |
+      | name_F | ScrumMMM |
+      | code_F | z11      |
 
     And Click on the element in the Dialog
       | saveButton |
 
     Then Success message should be displayedd
 
-  Scenario: Edit Field
+  Scenario: Edit a subject categories
     And User sending the keys in Dialog content
-      | searchInputOne | DatabaseTESTing |
+      | searchInputOne | ScrumMMM |
 
     And Click on the element in the Dialog
-      | editButton |
+      | searchButton |
+      | editButton   |
 
     And User sending the keys in Dialog content
-      | name_F | APITestingg |
-      | code_F | 12xyz       |
+      | name_F | POwnerr |
+      | code_F | z2      |
 
     And Click on the element in the Dialog
       | saveButton |
 
     Then Success message should be displayedd
 
-  Scenario: Delete Field
+  Scenario: Delete a subject categories
     And User delete item from Dialog
-      | APITestingg |
+      | POwnerr |
 
     Then Success message should be displayedd

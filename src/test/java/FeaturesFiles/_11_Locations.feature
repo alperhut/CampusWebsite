@@ -43,6 +43,6 @@ Feature: Locations Functionality
     Then Success message should be displayed from location
 
     Examples:
-      | Locations   | shortName | capacity | newLocations   | newShortName | newCapacity |
-      | GAZIToronto | SnKilda   | 99999    | SANLIVancouver | Missisipi    | 89999       |
+      | Locations     | shortName | capacity | newLocations | newShortName | newCapacity |
+      | GAZIVancouver | SnKilda   | 99999    | SANLIToronto | Missisipi    | 89999       |
 

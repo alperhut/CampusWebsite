@@ -4,31 +4,49 @@ Feature: Attestations Functionality
     Given Navigate to basqar
     When Enter username and password and click login button
     Then User should login successfuly
-
-  Scenario Outline: Add Attestations
-
     And Click on the element in the left Nav
 
-      | acceptCookies |
-      | HResources    |
-      | underHRsetup  |
-      | Attestations  |
+      | acceptCookies       |
+      | humanResources      |
+      | humanResourcesSetup |
+      | attestations        |
 
-    And Create to new "<Attestations>"
+  Scenario:Create a Attestations
+    And Click on the element in the Dialog
+      | addButton |
 
-    Then Success message should be displayed
+    And User sending the keys in Dialog content
+      | searchInputTwo | Francine GurCesme |
 
-    And Edit to "<newAttestations>"
+    And Click on the element in the Dialog
+      | saveButton |
 
-    Then Success message should be displayed
+    Then Success message should be displayedd
 
-    And Click to Delete Button from Attestations
+  Scenario:Edit a Attestations
+    And User sending the keys in Dialog content
+      | searchInputOne | Francine GurCesme |
 
-    Then Success message should be displayed
+    And Click on the element in the Dialog
+      | searchButton |
 
-    Examples:
-      | Attestations | newAttestations |
-      | test0101     | test2020        |
+    And Click on the element in the Dialog
+      | editButton |
+
+    And User sending the keys in Dialog content
+      | searchInputTwo | Friedrich OzDemir |
+
+    And Click on the element in the Dialog
+      | saveButton |
+
+    Then Success message should be displayedd
+
+  Scenario:Delete a Attestations
+    And User delete item from Dialog
+      | Friedrich OzDemir |
+
+    Then Success message should be displayedd
+
 
 
 

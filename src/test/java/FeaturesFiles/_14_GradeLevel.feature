@@ -47,8 +47,8 @@ Feature: Grade Level Functionality
     Then Success message should be displayed from GradeLevel
 
     Examples:
-      | NameGL    | shortNameGL | orderGL | newNameGL        | newShortNameGL | newOrderGL |
-      | Zizeggerr | zarttr      | 22      | haneggsigorhasas | zurtt          | 13         |
+      | NameGL    | shortNameGL | orderGL | newNameGL         | newShortNameGL | newOrderGL |
+      | ZizeggerR | zarttr      | 22      | haneggsigorhasasS | zurtt          | 13         |
 
 
 
