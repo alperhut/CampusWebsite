@@ -3,10 +3,11 @@ Feature: Human Resource
   Background:
     Given Navigate to basqar
     When Enter username and password and click login button
-    Then User should login successfuly
+#    Then User should login successfuly
 
   Scenario: Creat,edit and delete a position
     When Go to HumanResource in the Omer's DialogContent
+      | cookiesAccept                   |
       | humanResource                   |
       | HumanResourceSetup              |
       | humanResourcePositionCategories |
